@@ -568,11 +568,6 @@ function VideoProofSection() {
 
   const videos = [
     {
-      src: depoimento1,
-      name: 'Cliente sr. Vilmar',
-      subtitle: 'Experiência real de quem fechou com estratégia.',
-    },
-    {
       src: depoimento2,
       name: 'Cliente sra. Rosa',
       subtitle: 'Clareza de processo e resultado na prática.',
