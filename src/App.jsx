@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from 'react'
 import {
+  motion,
   useInView,
   useReducedMotion,
   useScroll,
