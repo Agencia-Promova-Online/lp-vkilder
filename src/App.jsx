@@ -7,10 +7,11 @@ import {
   useSpring,
   useTransform,
 } from 'framer-motion'
+
+void motion
 import logoDouradaHorizontal from './assets/logo PNG/Dourada- Horizontal.png'
 import logoDouradaVertical from './assets/logo PNG/Dourada- Vertical.png'
 import fotoEquipe from './assets/foto-equipe.JPEG'
-import depoimento1 from './assets/depoimentos/IMG_2298.mp4'
 import depoimento2 from './assets/depoimentos/IMG_2299.mp4'
 import './App.css'
 
@@ -152,16 +153,14 @@ function Navbar() {
             <img className="vk-logo" src={logoDouradaHorizontal} alt="Vkilder" />
           </a>
           <div className="d-none d-lg-flex align-items-center gap-3">
-            <a className="vk-btn btn" href="#simulador">
-              Fazer uma análise
-            </a>
+           
             <a className="vk-btn vk-btn-gold btn" href="#simulador">
-              Conquistar meu Imóvel
+              Fazer uma simulação
             </a>
           </div>
           <div className="d-lg-none d-flex align-items-center gap-2">
             <a className="vk-btn vk-btn-gold btn btn-sm" href="#simulador">
-              Conquistar meu Imóvel
+              Fazer uma simulação
             </a>
           </div>
         </div>
@@ -229,10 +228,10 @@ function Hero() {
 
               <div className="vk-hero-actions">
                 <a className="vk-btn vk-btn-gold btn" href="#simulador">
-                  Conquistar um Imóvel
+                  Fazer uma simulação
                 </a>
                 <a className="vk-btn btn" href="#prova-social">
-                  Fazer uma Análise
+                  Saber mais
                 </a>
               </div>
 
@@ -551,7 +550,15 @@ function VideoPreview({ src }) {
 
   return (
     <div ref={ref} className="vk-video-frame">
-      <video className="vk-video" src={inView ? src : undefined} muted playsInline preload="metadata" />
+      <video
+        className="vk-video"
+        src={inView ? src : undefined}
+        muted
+        autoPlay
+        loop
+        playsInline
+        preload="metadata"
+      />
       <div className="vk-video-overlay" aria-hidden="true" />
       <div className="vk-video-play" aria-hidden="true">
         <span>
@@ -631,7 +638,15 @@ function VideoProofSection() {
             </div>
 
             <div className="vk-video-modal-player mt-3">
-              <video className="vk-video-modal-video" src={active.src} controls autoPlay playsInline />
+              <video
+                className="vk-video-modal-video"
+                src={active.src}
+                controls
+                autoPlay
+                muted
+                playsInline
+                preload="metadata"
+              />
             </div>
           </motion.div>
         </div>
